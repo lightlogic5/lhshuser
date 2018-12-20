@@ -26,4 +26,5 @@ urlpatterns = [
     path('logout/', LogoutView.as_view(), name="logout"),
     # path('simpleTodo/', include('todolist.urls')),
     path('polls/', include('printforms.urls')),
+    path('user/', include('users.urls')),
 ]

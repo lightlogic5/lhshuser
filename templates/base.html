@@ -50,7 +50,7 @@
       <li class="am-active"><a href="/polls/list/">首页</a></li>
       <li><a href="/polls/">报修申请</a></li>
         <li><a href="/polls/">个人查询</a></li>
-        <li><a href="/polls/">信息维护</a></li>
+        <li><a href="/user/">信息维护</a></li>
     </ul>
 
     <form class="am-topbar-form am-topbar-left am-form-inline" role="search">
@@ -68,7 +68,7 @@
     </div>
 
     <div class="am-topbar-right">
-      <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><a href="{% url 'login' %}">欢迎你，{{ user.name }}</a></button>
+      <button class="am-btn am-btn-primary am-topbar-btn am-btn-sm"><a href="{% url 'login' %}">欢迎你，{{ user.user_employee.name }}</a></button>
     </div>
 
 

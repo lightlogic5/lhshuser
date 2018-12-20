@@ -2,9 +2,13 @@ from django.db import models
 from django.contrib.auth.models import User
 # from django.contrib.auth.models import AbstractUser
 
+class UserProfile(models.Model):
+    employee_id = models.CharField(max_length=100, verbose_name='员工编号')
+    password = models.CharField(max_length=100, verbose_name='密码')
+
 
 class Employee(models.Model):
-    user = models.OneToOneField(User)
+    user = models.OneToOneField(User, on_delete=models.CASCADE, related_name='user_employee')
     name = models.CharField(max_length=100, verbose_name='姓名', null=True, blank=True)
     birthday = models.DateField(verbose_name='生日', null=True, blank=True)
     # employee_id = models.CharField(max_length=20, verbose_name='员工编号')
